@@ -25,7 +25,7 @@
        <RowDefinition Height="Auto"></RowDefinition>
    </Grid.RowDefinitions>
 
-    <Button Margin="4" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Command="{Binding ClickHandler}">Generate data</Button>
+    <Button Margin="4" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Command="{Binding ClickCommand}">Generate data</Button>
 
     <DataGrid Name="gridData"
             Margin="4" Grid.Row="0" Grid.Column="1"

@@ -17,17 +17,29 @@ public class MainWindowViewModel : ViewModelBase
 
     public ReactiveCommand<Unit, Unit> ClickCommand { get; }
 
-    private ObservableCollection<PersonRecord> _items;
-    public ObservableCollection<PersonRecord> Items
-    {
-        get { return _items; }
-        //set { SetProperty(ref _items, value); }
-        set { _items = value; }
-    }
+    public ObservableCollection<PersonRecord> Items { get; set; }
 
     public MainWindowViewModel()
     {
-        Items = new ObservableCollection<PersonRecord>();
+        List<PersonRecord> items = new List<PersonRecord>();
+        items.Add(new PersonRecord() 
+            { 
+                Name = "John Doe", 
+                Id = 1, 
+                TabNumber = "1234", 
+                Email = "johndoe@me.com", 
+                PhoneNumber = "123-456-7890" 
+            });
+        items.Add(new PersonRecord()
+        {
+            Name = "Jane Doe", 
+            Id = 2, 
+            TabNumber = "1234", 
+            Email = "johndoe@me.com", 
+            PhoneNumber = "123-456-7890"
+        });
+
+        Items = new ObservableCollection<PersonRecord>(items);
         ClickCommand = ReactiveCommand.Create(ClickHandler);
     }
 

@@ -4,7 +4,7 @@
     <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
-    <ApplicationId>com.CompanyName.AndrAva</ApplicationId>
+    <ApplicationId>com.CompanyName.TEC_avalonia_cross</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
@@ -24,6 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TEC_avalonia_2023\TEC_avalonia_2023.csproj" />
+    <ProjectReference Include="..\TEC_avalonia_cross\TEC_avalonia_cross.csproj" />
   </ItemGroup>
 </Project>

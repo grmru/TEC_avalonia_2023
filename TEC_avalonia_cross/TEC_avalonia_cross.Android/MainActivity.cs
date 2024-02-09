@@ -4,10 +4,10 @@ using Avalonia;
 using Avalonia.Android;
 using Avalonia.ReactiveUI;
 
-namespace AndrAva.Android;
+namespace TEC_avalonia_cross.Android;
 
 [Activity(
-    Label = "TEC_avalonia_2023.Android",
+    Label = "TEC_avalonia_cross.Android",
     Theme = "@style/MyTheme.NoActionBar",
     Icon = "@drawable/icon",
     MainLauncher = true,

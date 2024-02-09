@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TEC_avalonia_cross.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TEC_avalonia_cross.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Button Margin="4" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Command="{Binding ClickCommand}">Generate data</Button>
+
+    <DataGrid Name="gridData"
+            Margin="4" Grid.Row="0" Grid.Column="1"
+            AutoGenerateColumns="True" IsReadOnly="True" 
+            GridLinesVisibility="All"
+            BorderThickness="1" BorderBrush="Gray"
+            ItemsSource="{Binding Items}">
+    </DataGrid>
+  </Grid>
+
+</UserControl>

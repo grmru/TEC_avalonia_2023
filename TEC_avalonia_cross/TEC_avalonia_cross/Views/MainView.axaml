@@ -14,18 +14,18 @@
 
   <Grid>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="Auto"></ColumnDefinition>
         <ColumnDefinition Width="*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
-        <RowDefinition Height="*"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
     </Grid.RowDefinitions>
 
-    <Button Margin="4" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Command="{Binding ClickCommand}">Generate data</Button>
+    <Button Margin="4" Grid.Row="0" Grid.Column="0" 
+      VerticalAlignment="Top" Command="{Binding ClickCommand}">Обновить</Button>
 
     <DataGrid Name="gridData"
-            Margin="4" Grid.Row="0" Grid.Column="1"
+            Margin="4" Grid.Row="1" Grid.Column="0"
             AutoGenerateColumns="True" IsReadOnly="True" 
             GridLinesVisibility="All"
             BorderThickness="1" BorderBrush="Gray"
